@@ -1,0 +1,26 @@
+.header {
+  height: 72px;
+  padding: 0 48px;
+  background: #ffffff;
+  border-bottom: 1px solid #f2dce5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #e85a8b;
+}
+
+.header-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.header-nav span {
+  font-size: 15px;
+  color: #555;
+  cursor: pointer;
+}

@@ -1,0 +1,27 @@
+.category-tabs {
+  margin-top: 36px;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.category-list button {
+  min-width: 110px;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 18px;
+  background: #ffffff;
+  color: #555;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(232, 90, 139, 0.12);
+  cursor: pointer;
+}
+
+.category-list button.active,
+.category-list button:hover {
+  background: #e85a8b;
+  color: white;
+}

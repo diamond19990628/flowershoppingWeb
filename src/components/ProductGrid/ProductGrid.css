@@ -1,0 +1,9 @@
+.product-section {
+  margin-top: 36px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}

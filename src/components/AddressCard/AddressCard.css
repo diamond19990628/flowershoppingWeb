@@ -1,0 +1,27 @@
+.address-card {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(232, 90, 139, 0.1);
+}
+
+.address-card h3 {
+  margin: 0 0 8px;
+}
+
+.address-card p {
+  margin: 0;
+  color: #777;
+}
+
+.address-card button {
+  border: none;
+  border-radius: 999px;
+  padding: 9px 18px;
+  background: #e85a8b;
+  color: white;
+  cursor: pointer;
+}
