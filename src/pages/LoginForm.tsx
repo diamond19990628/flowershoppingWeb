@@ -1,7 +1,21 @@
+import { useContext, useState } from "react";
+import { Login } from "../api/login";
 import Header from "../components/Header/Header";
+import { AuthContext } from "../context/AuthContext";
 import "./LoginForm.css";
 
 export default function LoginForm() {
+  const [nickName,setNickName] = useState("");
+  const [password,setPassword] = useState("");
+  const [phone,setPhone] = useState("");
+  const {setToken} = useContext(AuthContext);
+  const login =async () => {
+    const res = await Login(nickName,password,phone);
+    if(res.status==200){
+      localStorage.setItem("token",res.data.token);
+      setToken(res.data.token);
+    }
+  }
   return (
     <>
       <Header/>
@@ -25,6 +39,10 @@ export default function LoginForm() {
               <input
                 type="text"
                 placeholder="请输入用户名"
+                value={nickName}
+                onChange={(e)=>{
+                  setNickName(e.target.value);
+                }}
               />
             </div>
 
@@ -33,6 +51,10 @@ export default function LoginForm() {
               <input
                 type="tel"
                 placeholder="请输入手机号"
+                value={phone}
+                onChange={(e)=>{
+                  setPhone(e.target.value);
+                }}
               />
             </div>
 
@@ -41,10 +63,14 @@ export default function LoginForm() {
               <input
                 type="password"
                 placeholder="请输入密码"
+                value={password}
+                onChange={(e)=>{
+                  setPassword(e.target.value)
+                }}
               />
             </div>
 
-            <button className="login-button">
+            <button className="login-button" onClick={login}>
               登录
             </button>
 
